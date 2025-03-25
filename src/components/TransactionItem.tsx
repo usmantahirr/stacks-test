@@ -1,5 +1,5 @@
 import { cn } from "@/lib/utils";
-import { Transaction } from "../types";
+import { Transaction } from "../app/types";
 import { Card, CardContent } from "@/components/ui/card";
 import { Check } from "lucide-react";
 

@@ -1,13 +1,15 @@
 "use client";
 
-import { useQuery } from "@tanstack/react-query";
-import TransactionItem from "./components/TransactionItem";
 import { useEffect, useState } from "react";
+import { useQuery } from "@tanstack/react-query";
+
+import TransactionItem from "@/components/TransactionItem";
+import Loader from "@/components/loader";
+import Selected from "@/components/selected";
 
 import getTransactions from "./getTransactions";
 import { Transaction } from "./types";
-import Loader from "./components/loader";
-import Selected from "./components/selected";
+
 export default function Home() {
   const { isPending, data } = useQuery<Transaction[]>({
     queryKey: ["transactions"],
